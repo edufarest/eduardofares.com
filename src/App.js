@@ -1,23 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [activeSection, setActiveSection] = useState('');
+
   return (
+  // eslint-disable-next-line react/jsx-filename-extension
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+
+        <button
+          type="button"
+          className={`header__btn ${activeSection === 'home' ? 'header__btn__active' : ''}`}
+          onClick={() => setActiveSection('home')}
         >
-          Learn React
-        </a>
+          Home
+        </button>
+
+        <button
+          type="button"
+          className={`header__btn ${activeSection === 'skillset' ? 'header__btn__active' : ''}`}
+          onClick={() => setActiveSection('skillset')}
+        >
+          Skillset
+        </button>
+
+        <button
+          type="button"
+          className={`header__btn ${activeSection === 'projects' ? 'header__btn__active' : ''}`}
+          onClick={() => setActiveSection('projects')}
+        >
+          Projects
+        </button>
+
+        <button
+          type="button"
+          className={`header__btn ${activeSection === 'education' ? 'header__btn__active' : ''}`}
+          onClick={() => setActiveSection('education')}
+        >
+          Education + Resume
+        </button>
+
       </header>
     </div>
   );

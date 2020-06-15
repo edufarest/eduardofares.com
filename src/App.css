@@ -17,11 +17,20 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.header__btn {
+  background: #D5D5D8;
+  border: none;
+  padding: 20px 100px;
+}
+
+.header__btn__active {
+  background: #d5d5d89e;
 }
 
 .App-link {
